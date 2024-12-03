@@ -1,0 +1,59 @@
+/*
+Text Alignment:
+===========================
+*/
+.txt-c {
+  text-align: center;
+}
+
+/*
+Box Module:
+===========================
+*/
+.d-flex {
+  display : flex;
+}
+
+.align-c {
+  align-items: center;
+}
+
+.justify-c {
+  justify-content: center;
+}
+
+/*
+Positioning:
+===========================
+*/
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: relative;
+}
+
+/*
+Spacing:
+===========================
+*/
+.p-10 {
+  padding: 0.625rem;
+}
+
+.p-15 {
+  padding: 0.9375rem;
+}
+
+.p-20 {
+  padding: 1.25rem;
+}
+
+/*
+Fonts:
+===========================
+*/
+.fs-14 {
+  font-size: 0.875rem;
+}
