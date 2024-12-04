@@ -1,4 +1,17 @@
 /*
+Variables:
+===========================
+*/
+:root {
+  --red: #f44336;
+  --blue: #0075ff;
+  --blue-alt: #0d69d5;
+  --orange: #f59e0b;
+  --green: #22c55e;
+  --gray: #888;
+}
+
+/*
 Text Alignment:
 ===========================
 */
@@ -20,6 +33,16 @@ Box Module:
 
 .justify-c {
   justify-content: center;
+}
+
+.flex-between-c {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-1 {
+  flex: 1;
 }
 
 /*
@@ -56,4 +79,20 @@ Fonts:
 */
 .fs-14 {
   font-size: 0.875rem;
+}
+
+/*
+Sizing:
+===========================
+*/
+.w-full {
+  width: 100%;
+}
+
+/*
+Coloring:
+===========================
+*/
+.bg-white {
+  background-color: #fff;
 }
