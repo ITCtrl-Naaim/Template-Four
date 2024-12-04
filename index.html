@@ -14,7 +14,7 @@
     <!-- Fallback: Local Font Awesome -->
     <link rel="stylesheet" href="css/all.min.css" />
     <!-- Main Project CSS Files -->
-    <link rel="stylesheet" href="css/privateFramework.css">
+    <link rel="stylesheet" href="css/privateFramework.css" />
     <link rel="stylesheet" href="css/karim.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,35 +26,180 @@
   </head>
   <body>
     <div class="page d-flex">
+      <!-- Sidebar -->
       <aside class="p-20 p-relative">
-        <h3 class="logo txt-c p-relative">Naaim</h3>
+        <h3 class="logo txt-c p-relative">Karim</h3>
         <nav>
           <ul>
-            <li><a href="index.html" class="active"><i class="fa-regular fa-chart-bar fa-fw"></i><span>Dashboard</span></a></li>
-            <li><a href="settings.html"><i class="fa-solid fa-gear fa-fw"></i><span>Settings</span></a></li>
-            <li><a href="profile.html"><i class="fa-regular fa-user fa-fw"></i><span>Profile</span></a></li>
-            <li><a href="projects.html"><i class="fa-solid fa-diagram-project fa-fw"></i><span>Projects</span></a></li>
-            <li><a href="courses.html"><i class="fa-solid fa-graduation-cap fa-fw"></i><span>Courses</span></a></li>
-            <li><a href="friends.html"><i class="fa-regular fa-circle-user fa-fw"></i><span>Friends</span></a></li>
-            <li><a href="files.html"><i class="fa-regular fa-file fa-fw"></i><span>Files</span></a></li>
-            <li><a href="plans.html"><i class="fa-regular fa-credit-card fa-fw"></i><span>Plans</span></a></li>
+            <li>
+              <a href="index.html" class="active"
+                ><i class="fa-regular fa-chart-bar fa-fw"></i
+                ><span>Dashboard</span></a
+              >
+            </li>
+            <li>
+              <a href="settings.html"
+                ><i class="fa-solid fa-gear fa-fw"></i><span>Settings</span></a
+              >
+            </li>
+            <li>
+              <a href="profile.html"
+                ><i class="fa-regular fa-user fa-fw"></i><span>Profile</span></a
+              >
+            </li>
+            <li>
+              <a href="projects.html"
+                ><i class="fa-solid fa-diagram-project fa-fw"></i
+                ><span>Projects</span></a
+              >
+            </li>
+            <li>
+              <a href="courses.html"
+                ><i class="fa-solid fa-graduation-cap fa-fw"></i
+                ><span>Courses</span></a
+              >
+            </li>
+            <li>
+              <a href="friends.html"
+                ><i class="fa-regular fa-circle-user fa-fw"></i
+                ><span>Friends</span></a
+              >
+            </li>
+            <li>
+              <a href="files.html"
+                ><i class="fa-regular fa-file fa-fw"></i><span>Files</span></a
+              >
+            </li>
+            <li>
+              <a href="plans.html"
+                ><i class="fa-regular fa-credit-card fa-fw"></i
+                ><span>Plans</span></a
+              >
+            </li>
           </ul>
         </nav>
       </aside>
-      <main class="flex-1">
+      <div class="content-side flex-1">
+        <!-- Header -->
         <header class="p-15 flex-between-c bg-white">
           <form action="" class="p-relative">
-            <input type="search" name="search_query" placeholder="Type A Keyword">
+            <input
+              type="search"
+              name="search_query"
+              placeholder="Type A Keyword"
+            />
           </form>
           <div class="icons d-flex align-c">
             <span class="notification">
               <i class="fa-regular fa-bell fa-lg"></i>
             </span>
-            <img src="imgs/avatar.png" alt="">
+            <img src="imgs/avatar.png" alt="" />
           </div>
         </header>
-        <section></section>
-      </main>
+        <main>
+          <h1 class="main-header m-20 p-relative">Dashboard</h1>
+          <div class="sections-wrapper m-20 grid-3">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+              <div class="intro">
+                <div>
+                  <h2>Welcome</h2>
+                  <span>Karim</span>
+                </div>
+                <img src="imgs/welcome.png" alt="" />
+              </div>
+              <img src="imgs/avatar.png" alt="" class="profile-img" />
+              <div class="info">
+                <div>
+                  Naaim Karim
+                  <span class="rule">Developer</span>
+                </div>
+                <div>
+                  80
+                  <span class="projects">Projects</span>
+                </div>
+                <div>
+                  &dollar;112K
+                  <span class="earnings">Earned</span>
+                </div>
+              </div>
+              <a href="profile.html" class="visit btn-blue">Profile</a>
+            </section>
+            <!-- Draft Section -->
+            <section class="draft-section p-20">
+              <h2>Quick Draft</h2>
+              <p>Write A Draft For Your Ideas</p>
+              <form action="">
+                <input type="text" class="title" placeholder="Title" />
+                <textarea placeholder="Your Thoughts"></textarea>
+              </form>
+              <button class="save btn-blue">Save</button>
+            </section>
+            <!-- Yearly Targets Section -->
+            <section class="yearly-targets p-20">
+              <h2>Yearly Targets</h2>
+              <p>Targets Of The Year</p>
+              <div class="row money">
+                <i class="fa-solid fa-dollar-sign fa-lg c-blue"></i>
+                <div class="details">
+                  <span class="title">Money</span>
+                  <span class="achieved">&dollar;20,000</span>
+                  <div class="prog">
+                    <span style="width: 80%" data-progress="80%"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row projects">
+                <i class="fa-solid fa-code fa-lg c-orange"></i>
+                <div class="details">
+                  <span class="title">Projects</span>
+                  <span class="achieved">24</span>
+                  <div class="prog">
+                    <span style="width: 55%" data-progress="55%"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row team">
+                <i class="fa-solid fa-user fa-lg c-green"></i>
+                <div class="details">
+                  <span class="title">Team</span>
+                  <span class="achieved">12</span>
+                  <div class="prog">
+                    <span style="width: 75%" data-progress="75%"></span>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Tickets Statistics -->
+            <section class="tickets-stats p-20">
+              <h2>Tickets Statistics</h2>
+              <p>Everything About Support Tickets</p>
+              <div class="box-wrapper d-flex f-wrap gap-20">
+                <div class="box">
+                  <i class="fa-regular fa-rectangle-list fa-2x c-orange"></i>
+                  <span class="amount">2500</span>
+                  <span class="title">Total</span>
+                </div>
+                <div class="box">
+                  <i class="fa-solid fa-spinner fa-2x c-blue"></i>
+                  <span class="amount">500</span>
+                  <span class="title">Pending</span>
+                </div>
+                <div class="box">
+                  <i class="fa-regular fa-circle-check fa-2x c-green"></i>
+                  <span class="amount">1900</span>
+                  <span class="title">Closed</span>
+                </div>
+                <div class="box">
+                  <i class="fa-regular fa-rectangle-xmark fa-2x c-red"></i>
+                  <span class="amount">100</span>
+                  <span class="title">Deleted</span>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
     </div>
   </body>
 </html>

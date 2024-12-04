@@ -1,17 +1,4 @@
 /*
-Variables:
-===========================
-*/
-:root {
-  --red: #f44336;
-  --blue: #0075ff;
-  --blue-alt: #0d69d5;
-  --orange: #f59e0b;
-  --green: #22c55e;
-  --gray: #888;
-}
-
-/*
 Text Alignment:
 ===========================
 */
@@ -20,11 +7,11 @@ Text Alignment:
 }
 
 /*
-Box Module:
+Box Module + Display:
 ===========================
 */
 .d-flex {
-  display : flex;
+  display: flex;
 }
 
 .align-c {
@@ -43,6 +30,38 @@ Box Module:
 
 .flex-1 {
   flex: 1;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28.125rem, 1fr)); /* 450px */
+  gap: var(--20px);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr)); /* 250px */
+  gap: var(--20px);
+}
+
+.gap-20 {
+  gap: var(--20px);
+}
+
+.d-block {
+  display: block;
+}
+
+@media (max-width: 47.9375rem) {
+  /* 767px */
+  .grid-3 {
+    grid-template-columns: minmax(12.5rem, 1fr);
+    gap: 10px;
+  }
 }
 
 /*
@@ -73,6 +92,18 @@ Spacing:
   padding: 1.25rem;
 }
 
+.m-10 {
+  margin: 0.625rem;
+}
+
+.m-15 {
+  margin: 0.9375rem;
+}
+
+.m-20 {
+  margin: 1.25rem;
+}
+
 /*
 Fonts:
 ===========================
@@ -95,4 +126,65 @@ Coloring:
 */
 .bg-white {
   background-color: #fff;
+}
+
+.c-red {
+  color: var(--red);
+}
+
+.c-blue {
+  color: var(--blue);
+}
+
+.c-orange {
+  color: var(--orange);
+}
+
+.c-green {
+  color: var(--green);
+}
+
+.c-gray {
+  color: var(--gray);
+}
+
+/*
+Buttons:
+===========================
+*/
+.btn-blue {
+  background-color: var(--blue);
+  color: #fff;
+  cursor: pointer;
+  padding: var(--5px) var(--10px);
+  transition: var(--transition);
+  border-radius: var(--br-6);
+  -webkit-border-radius: var(--br-6);
+  -moz-border-radius: var(--br-6);
+  -ms-border-radius: var(--br-6);
+  -o-border-radius: var(--br-6);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.btn-blue:hover {
+  background-color: var(--blue-alt);
+}
+
+.btn-off-white {
+  background-color: var(--off-white);
+  color: #000;
+  padding: var(--5px) var(--10px);
+  transition: var(--transition);
+  border-radius: var(--br-6);
+  -webkit-border-radius: var(--br-6);
+  -moz-border-radius: var(--br-6);
+  -ms-border-radius: var(--br-6);
+  -o-border-radius: var(--br-6);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
 }
