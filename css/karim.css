@@ -249,6 +249,7 @@ body > .page .content-side header .icons .notification::before {
   -o-border-radius: 50%;
 }
 
+/* -------------------- Components ----------------------- */
 /*
 Main Header:
 ===========================
@@ -266,6 +267,18 @@ Main Header:
   height: 3px;
   background: linear-gradient(90deg, #000 40%, #fff 40%);
 }
+
+/*
+Section's Paragraph:
+===========================
+*/
+.sections-wrapper .section-p {
+  color: var(--gray);
+  margin: var(--10px) 0 var(--20px);
+  font-size: var(--15px);
+}
+
+/* ----------------------------------------------------------------- */
 
 /*
 Section Wrapper,
@@ -378,12 +391,6 @@ Welcome Section:
 Draft Section:
 ===========================
 */
-.draft-section > p {
-  color: var(--gray);
-  margin: var(--10px) 0 var(--20px);
-  font-size: var(--15px);
-}
-
 .draft-section form input.title,
 .draft-section form textarea {
   background-color: var(--off-white);
@@ -414,16 +421,13 @@ Draft Section:
 Yearly Targets Section:
 ===========================
 */
-.yearly-targets > p {
-  color: var(--gray);
-  margin: var(--10px) 0 var(--20px);
-  font-size: var(--15px);
-}
-
 .yearly-targets .row {
   display: flex;
   align-items: center;
   gap: var(--15px);
+}
+
+.yearly-targets .row:not(:last-child) {
   margin-bottom: var(--20px);
 }
 
@@ -552,12 +556,6 @@ Yearly Targets Section:
 Tickets Statistics Section:
 ===========================
 */
-.tickets-stats > p {
-  color: var(--gray);
-  margin: var(--10px) 0 var(--20px);
-  font-size: var(--15px);
-}
-
 .tickets-stats .box {
   text-align: center;
   padding: var(--20px);
@@ -582,3 +580,132 @@ Tickets Statistics Section:
     width: 100%;
   }
 }
+
+/*
+Latest News Section:
+===========================
+*/
+.latest-news article {
+  display: flex;
+  align-items: center;
+}
+
+.latest-news article:not(:last-child) {
+  padding-bottom: var(--20px);
+  margin-bottom: var(--20px);
+  border-bottom: 1px solid var(--off-white);
+}
+
+.latest-news article img {
+  width: 6.25rem; /* 100px */ 
+  max-width: 100%;
+  margin-right: var(--15px);
+  border-radius: var(--br-6);
+  -webkit-border-radius: var(--br-6);
+  -moz-border-radius: var(--br-6);
+  -ms-border-radius: var(--br-6);
+  -o-border-radius: var(--br-6);
+}
+
+.latest-news article .details {
+  flex: 1;
+}
+
+.latest-news article .details h3 {
+  font-size: 1rem;
+  margin-bottom: var(--5px);
+}
+
+.latest-news article .details p {
+  font-size: var(--fs-14);
+  color: var(--gray);
+}
+
+.latest-news article .date {
+  font-size: var(--fs-13);
+}
+
+@media (max-width: 47.9375rem) {
+  .latest-news {
+    text-align: center;
+  }
+  .latest-news article {
+    flex-direction: column;
+  }
+  .latest-news article .details {
+    margin: 10px 0;
+  }
+}
+
+/*
+Latest Tasks Section:
+===========================
+*/
+.latest-tasks article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.latest-tasks article:not(:last-child) {
+  padding-bottom: var(--20px);
+  margin-bottom: var(--20px);
+  border-bottom: 1px solid var(--off-white);
+}
+
+.latest-tasks article .details h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.latest-tasks article .details p {
+  font-size: var(--fs-14);
+  color: var(--gray);
+}
+
+.latest-tasks article .delete {
+  cursor: pointer;
+  margin-left: 10px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.latest-tasks article .delete:hover {
+  color: var(--red);
+}
+
+/* Tasks Completed */
+.latest-tasks article.done {
+  opacity: 0.3;
+}
+
+.latest-tasks article.done .details {
+  text-decoration: line-through;
+}
+
+/*
+Top Search Section:
+===========================
+*/
+.top-search .titles,
+.top-search .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-search .item:not(:last-child) {
+  margin-bottom: var(--20px);
+}
+
+.top-search .item .count {
+  font-size: var(--fs-13);
+}
+
+/*
+Tickets Statistics Section:
+===========================
+*/

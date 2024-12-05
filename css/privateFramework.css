@@ -104,6 +104,14 @@ Spacing:
   margin: 1.25rem;
 }
 
+.mb-10 {
+  margin-bottom: 0.625rem;
+}
+
+.mb-20 {
+  margin-bottom: 1.25rem;
+}
+
 /*
 Fonts:
 ===========================
