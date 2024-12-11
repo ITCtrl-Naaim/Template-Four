@@ -76,6 +76,85 @@ button {
   border: none;
 }
 
+/* -------------------- Components ----------------------- */
+/*
+Section's Paragraph:
+===========================
+*/
+.sections-wrapper .section-p {
+  color: var(--gray);
+  margin-bottom: var(--20px);
+  font-size: var(--15px);
+}
+
+/*
+Toggle Checkbox:
+===========================
+*/
+.toggle-checkbox {
+  appearance: none;
+}
+
+.toggle-shape {
+  width: 78px;
+  height: 32px;
+  background-color: var(--light-gray);
+  position: relative;
+  cursor: pointer;
+  border-radius: var(--15px);
+  transition: var(--transition);
+  -webkit-border-radius: var(--15px);
+  -moz-border-radius: var(--15px);
+  -ms-border-radius: var(--15px);
+  -o-border-radius: var(--15px);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.toggle-shape::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00d";
+  font-weight: 900;
+  color: #aaa;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: var(--transition);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.toggle-checkbox:checked + .toggle-shape {
+  background-color: var(--blue);
+}
+
+.toggle-checkbox:checked + .toggle-shape::before {
+  content: "\f00c";
+  left: 50px;
+  color: var(--blue);
+}
+/* ----------------------------------------------------------------- */
+
 /*
 Page (sidebar & content wrapper):
 ===========================
@@ -180,13 +259,17 @@ Sidebar:
 }
 
 /*
-Main Head:
+Content Side:
 ===========================
 */
 body > .page .content-side {
   overflow: hidden;
 }
 
+/*
+Main Head:
+===========================
+*/
 body > .page .content-side header form::before {
   font-family: var(--fa-style-family-classic);
   content: "\f002";
@@ -254,16 +337,16 @@ body > .page .content-side header .icons .notification::before {
   -o-border-radius: 50%;
 }
 
-/* -------------------- Components ----------------------- */
 /*
-Main Header:
+Content Side Header:
 ===========================
 */
-.content-side > main .main-header {
-  margin-bottom: 40px;
+.content-side > main .content-header {
+  margin: var(--20px) var(--20px) var(--40px);
+  position: relative;
 }
 
-.content-side > main .main-header::after {
+.content-side > main .content-header::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -274,20 +357,7 @@ Main Header:
 }
 
 /*
-Section's Paragraph:
-===========================
-*/
-.sections-wrapper .section-p {
-  color: var(--gray);
-  margin: var(--10px) 0 var(--20px);
-  font-size: var(--15px);
-}
-
-/* ----------------------------------------------------------------- */
-
-/*
-Section Wrapper,
-Welcome Section:
+Section Wrapper
 ===========================
 */
 .content-side .sections-wrapper > section {
@@ -300,17 +370,15 @@ Welcome Section:
   -o-border-radius: var(--br-10);
 }
 
+/*
+Dashboard => Welcome Section:
+===========================
+*/
 .welcome-section .intro {
   display: flex;
   justify-content: space-between;
   padding: var(--20px);
   background-color: var(--off-white);
-}
-
-.welcome-section .intro span {
-  color: var(--gray);
-  margin-top: 5px;
-  display: block;
 }
 
 .welcome-section .intro > img {
@@ -390,7 +458,7 @@ Welcome Section:
 }
 
 /*
-Draft Section:
+Dashboard => Draft Section:
 ===========================
 */
 .draft-section form input.title,
@@ -420,7 +488,7 @@ Draft Section:
 }
 
 /*
-Yearly Targets Section:
+Dashboard => Yearly Targets Section:
 ===========================
 */
 .yearly-targets .row {
@@ -555,7 +623,7 @@ Yearly Targets Section:
 }
 
 /*
-Tickets Statistics Section:
+Dashboard => Tickets Statistics Section:
 ===========================
 */
 .tickets-stats .box {
@@ -584,7 +652,7 @@ Tickets Statistics Section:
 }
 
 /*
-Latest News Section:
+Dashboard => Latest News Section:
 ===========================
 */
 .latest-news article {
@@ -640,7 +708,7 @@ Latest News Section:
 }
 
 /*
-Latest Tasks Section:
+Dashboard => Latest Tasks Section:
 ===========================
 */
 .latest-tasks article {
@@ -689,7 +757,7 @@ Latest Tasks Section:
 }
 
 /*
-Top Search Section:
+Dashboard => Top Search Section:
 ===========================
 */
 .top-search .titles,
@@ -708,7 +776,7 @@ Top Search Section:
 }
 
 /*
-Latest Updates Section:
+Dashboard => Latest Updates Section:
 ===========================
 */
 .latest-uploads .file {
@@ -744,7 +812,7 @@ Latest Updates Section:
 }
 
 /*
-Last Project's Progress Section:
+Dashboard => Last Project's Progress Section:
 ===========================
 */
 .project-progress ul:before {
@@ -799,7 +867,7 @@ Last Project's Progress Section:
 }
 
 /*
-Reminders Section:
+Dashboard => Reminders Section:
 ===========================
 */
 .reminders ul li {
@@ -872,7 +940,7 @@ Reminders Section:
 }
 
 /*
-Latest Post:
+Dashboard => Latest Post:
 ===========================
 */
 .latest-post .info-wrapper img {
@@ -893,7 +961,7 @@ Latest Post:
 }
 
 /*
-Social Media Statistics:
+Dashboard => Social Media Statistics:
 ===========================
 */
 .social-stats .media-site {
@@ -977,7 +1045,7 @@ Social Media Statistics:
 }
 
 /*
-Projects:
+Dashboard => Projects:
 ===========================
 */
 .projects-widget {
@@ -1032,6 +1100,89 @@ Projects:
 .projects-widget table .status {
   font-size: var(--fs-13);
   color: #fff;
+}
+
+/*
+Setting => Site Control:
+===========================
+*/
+.site-control textarea {
+  width: 100%;
+  min-height: 150px;
+  font-size: var(--fs-13);
+  border: 1px solid var(--light-gray);
+  resize: none;
+  padding: var(--10px);
+  margin-top: var(--20px);
+  border-radius: var(--br-6);
+  -webkit-border-radius: var(--br-6);
+  -moz-border-radius: var(--br-6);
+  -ms-border-radius: var(--br-6);
+  -o-border-radius: var(--br-6);
+}
+
+/*
+Setting => General Information:
+===========================
+*/
+.general-info form div:not(:last-child) {
+  margin-bottom: var(--15px);
+}
+
+.general-info form div label {
+  display: block;
+  margin-bottom: var(--5px);
+  font-size: var(--fs-14);
+  color: var(--gray);
+}
+
+.general-info form div input {
+  font-size: var(--fs-13);
+  width: 100%;
+  padding: var(--10px);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--br-6);
+  -webkit-border-radius: var(--br-6);
+  -moz-border-radius: var(--br-6);
+  -ms-border-radius: var(--br-6);
+  -o-border-radius: var(--br-6);
+}
+
+.general-info form div input[type="email"] {
+  width: calc(100% - 75px);
+  margin-right: var(--10px);
+}
+
+.general-info form div input[type="email"]:disabled {
+  cursor: not-allowed;
+  background-color: #f0f4f8;
+  color: #bbb;
+}
+
+.general-info form .change {
+  background: none;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+/*
+Setting => Security Information:
+===========================
+*/
+.security-info > .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.security-info > .box:not(:last-child) {
+  border-bottom: 1px solid var(--off-white);
+  padding-bottom: var(--20px);
+  margin-bottom: var(--20px);
+}
+
+.security-info .devices-btn {
+  cursor: pointer;
 }
 
 /*

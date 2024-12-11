@@ -104,6 +104,10 @@ Spacing:
   margin: 1.25rem;
 }
 
+.mt-20 {
+  margin-top: 1.25rem;
+}
+
 .mb-5 {
   margin-bottom: 0.3125rem;
 }
@@ -126,6 +130,10 @@ Fonts:
 */
 .fs-14 {
   font-size: 0.875rem;
+}
+
+.fs-13 {
+  font-size: 0.8125rem;
 }
 
 .fw-bold {
