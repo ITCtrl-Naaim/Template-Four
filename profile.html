@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Primary: Font Awesome Kit -->
+    <script
+      src="https://kit.fontawesome.com/d3074918ef.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Fallback: Local Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Main Project CSS Files -->
+    <link rel="stylesheet" href="css/privateFramework.css" />
+    <link rel="stylesheet" href="css/karim.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page d-flex">
+      <!-- Sidebar -->
+      <aside class="p-20 p-relative">
+        <h3 class="logo txt-c p-relative">Karim</h3>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html"
+                ><i class="fa-regular fa-chart-bar fa-fw"></i
+                ><span>Dashboard</span></a
+              >
+            </li>
+            <li>
+              <a href="settings.html"
+                ><i class="fa-solid fa-gear fa-fw"></i><span>Settings</span></a
+              >
+            </li>
+            <li>
+              <a href="profile.html"
+                ><i class="fa-regular fa-user fa-fw"></i><span>Profile</span></a
+              >
+            </li>
+            <li>
+              <a href="projects.html"
+                ><i class="fa-solid fa-diagram-project fa-fw"></i
+                ><span>Projects</span></a
+              >
+            </li>
+            <li>
+              <a href="courses.html"
+                ><i class="fa-solid fa-graduation-cap fa-fw"></i
+                ><span>Courses</span></a
+              >
+            </li>
+            <li>
+              <a href="friends.html"
+                ><i class="fa-regular fa-circle-user fa-fw"></i
+                ><span>Friends</span></a
+              >
+            </li>
+            <li>
+              <a href="files.html"
+                ><i class="fa-regular fa-file fa-fw"></i><span>Files</span></a
+              >
+            </li>
+            <li>
+              <a href="plans.html"
+                ><i class="fa-regular fa-credit-card fa-fw"></i
+                ><span>Plans</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="content-side flex-1">
+        <!-- Header -->
+        <header class="p-15 flex-between-c bg-white">
+          <form action="" class="p-relative">
+            <input
+              type="search"
+              name="search_query"
+              placeholder="Type A Keyword"
+            />
+          </form>
+          <div class="icons d-flex align-c">
+            <span class="notification">
+              <i class="fa-regular fa-bell fa-lg"></i>
+            </span>
+            <img src="imgs/avatar.png" alt="" />
+          </div>
+        </header>
+        <main>
+          <h1 class="content-header">Profile</h1>
+          <!-- Profile Section -->
+          <section class="profile-section">
+            <div class="profile-box">
+              <img src="imgs/avatar.png" alt="" />
+              <h3>Naaim Karim</h3>
+              <span class="level">Level 20</span>
+              <div class="level-prog">
+                <span></span>
+              </div>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="fs-13 c-gray">550 Rating</span>
+            </div>
+            <div class="boxs-wrapper">
+              <div class="info-box">
+                <h4 class="info-header">General Information</h4>
+                <div class="info">
+                  <span class="title">Full Name:</span>
+                  <span class="text">Naaim Karim</span>
+                </div>
+                <div class="info">
+                  <span class="title">Country:</span>
+                  <span class="text">Luxembourg</span>
+                </div>
+                <div class="info">
+                  <span class="title">Gender:</span>
+                  <span class="text">Male</span>
+                </div>
+                <label for="generalInfo" class="d-flex align-c">
+                  <input
+                    type="checkbox"
+                    name="general_info"
+                    id="generalInfo"
+                    class="toggle-checkbox"
+                    checked
+                  />
+                  <div class="toggle-shape"></div>
+                </label>
+              </div>
+              <div class="info-box">
+                <h4 class="info-header">Personal Information</h4>
+                <div class="info">
+                  <span class="title">Email:</span>
+                  <span class="text">yourname@example.tld</span>
+                </div>
+                <div class="info">
+                  <span class="title">Date Of Birth:</span>
+                  <span class="text">April 07 / 1999</span>
+                </div>
+                <div class="info">
+                  <span class="title">Phone:</span>
+                  <span class="text">0123456789</span>
+                </div>  
+                <label for="personalInfo" class="d-flex align-c">
+                  <input
+                    type="checkbox"
+                    name="personal_info"
+                    id="personalInfo"
+                    class="toggle-checkbox"
+                  />
+                  <div class="toggle-shape"></div>
+                </label>
+              </div>
+              <div class="info-box">
+                <h4 class="info-header">Job Information</h4>
+                <div class="info">
+                  <span class="title">Title:</span>
+                  <span class="text">Full Stack Developer</span>
+                </div>
+                <div class="info">
+                  <span class="title">Years Of Experience:</span>
+                  <span class="text">15+</span>
+                </div>
+                <div class="info">
+                  <span class="title">Programming Languages:</span>
+                  <span class="text"> JS, Python, C++</span>
+                </div>
+                <label for="jobInfo" class="d-flex align-c">
+                  <input
+                    type="checkbox"
+                    name="job_info"
+                    id="jobInfo"
+                    class="toggle-checkbox"
+                    checked
+                  />
+                  <div class="toggle-shape"></div>
+                </label>
+              </div>
+              <div class="info-box">
+                <h4 class="info-header">Billing Information</h4>
+                <div class="info">
+                  <span class="title">Payment Method:</span>
+                  <span class="text">Paypal</span>
+                </div>
+                <div class="info">
+                  <span class="title">Subscription:</span>
+                  <span class="text">Monthly</span>
+                </div>
+                <div class="info">
+                  <span class="title">Email:</span>
+                  <span class="text">website@example.tld</span>
+                </div>
+                <label for="billingInfo" class="d-flex align-c">
+                  <input
+                    type="checkbox"
+                    name="billing_info"
+                    id="billingInfo"
+                    class="toggle-checkbox"
+                  />
+                  <div class="toggle-shape"></div>
+                </label>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

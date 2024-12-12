@@ -76,6 +76,10 @@ button {
   border: none;
 }
 
+p {
+  line-height: 1.3;
+}
+
 /* -------------------- Components ----------------------- */
 /*
 Section's Paragraph:
@@ -85,6 +89,7 @@ Section's Paragraph:
   color: var(--gray);
   margin-bottom: var(--20px);
   font-size: var(--15px);
+  line-height: 1.5;
 }
 
 /*
@@ -101,12 +106,12 @@ Toggle Checkbox:
   background-color: var(--light-gray);
   position: relative;
   cursor: pointer;
-  border-radius: var(--15px);
+  border-radius: 1rem;
   transition: var(--transition);
-  -webkit-border-radius: var(--15px);
-  -moz-border-radius: var(--15px);
-  -ms-border-radius: var(--15px);
-  -o-border-radius: var(--15px);
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
@@ -357,7 +362,7 @@ Content Side Header:
 }
 
 /*
-Section Wrapper
+Sections Wrapper & section
 ===========================
 */
 .content-side .sections-wrapper > section {
@@ -368,6 +373,12 @@ Section Wrapper
   -moz-border-radius: var(--br-10);
   -ms-border-radius: var(--br-10);
   -o-border-radius: var(--br-10);
+}
+
+@media (max-width: 47.9375rem) {
+  .content-side .sections-wrapper {
+    margin: 20px 10px 10px;
+  }
 }
 
 /*
@@ -437,9 +448,6 @@ Dashboard => Welcome Section:
 }
 
 @media (max-width: 47.9375rem) {
-  .content-side .sections-wrapper {
-    margin: 20px 10px;
-  }
   .welcome-section .intro {
     padding-bottom: 30px;
   }
@@ -1050,6 +1058,20 @@ Dashboard => Projects:
 */
 .projects-widget {
   overflow-x: auto;
+  padding: var(--20px);
+  margin: var(--20px);
+  background-color: #fff;
+  border-radius: var(--br-10);
+  -webkit-border-radius: var(--br-10);
+  -moz-border-radius: var(--br-10);
+  -ms-border-radius: var(--br-10);
+  -o-border-radius: var(--br-10);
+}
+
+@media (max-width: 47.9375rem) {
+  .projects-widget {
+    margin: 10px 10px 20px;
+  }
 }
 
 .projects-widget table {
@@ -1079,7 +1101,7 @@ Dashboard => Projects:
 }
 
 .projects-widget table tbody tr:hover {
-  background-color: #FAF7F7;
+  background-color: #faf7f7;
 }
 
 .projects-widget table img {
@@ -1129,7 +1151,7 @@ Setting => General Information:
   margin-bottom: var(--15px);
 }
 
-.general-info form div label {
+.general-info form div .input-label {
   display: block;
   margin-bottom: var(--5px);
   font-size: var(--fs-14);
@@ -1183,6 +1205,364 @@ Setting => Security Information:
 
 .security-info .devices-btn {
   cursor: pointer;
+}
+
+/*
+Setting => Social Media Information:
+===========================
+*/
+.social-info .site {
+  border: 1px solid var(--lighter-gray);
+  display: flex;
+  margin-top: var(--15px);
+  overflow: hidden;
+  border-radius: var(--br-6);
+  -webkit-border-radius: var(--br-6);
+  -moz-border-radius: var(--br-6);
+  -ms-border-radius: var(--br-6);
+  -o-border-radius: var(--br-6);
+}
+
+.social-info .site i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  width: var(--40px);
+  height: var(--40px);
+  border-right: 1px solid var(--lighter-gray);
+  color: var(--gray);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.social-info .site input[type="text"] {
+  padding-left: var(--10px);
+  background-color: #f6f6f6;
+  font-size: var(--fs-13);
+  width: 100%;
+}
+
+.social-info .site:focus-within i {
+  color: #000;
+}
+
+/*
+Setting => Widgets Control:
+===========================
+*/
+.widgets-control .checkbox {
+  margin-top: var(--15px);
+}
+
+.widgets-control .checkbox input[type="checkbox"] {
+  appearance: none;
+  display: none;
+}
+
+.widgets-control .checkbox label {
+  padding-left: var(--30px);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.widgets-control .checkbox label::before,
+.widgets-control .checkbox label::after {
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--gray);
+  position: absolute;
+  left: 0;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.widgets-control .checkbox label::before {
+  content: "";
+}
+
+.widgets-control .checkbox label:hover::before {
+  border-color: var(--blue);
+}
+
+.widgets-control .checkbox label::after {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00c";
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+  font-size: var(--fs-13);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  transform: scale(0) rotate(360deg);
+  -webkit-transform: scale(0) rotate(360deg);
+  -moz-transform: scale(0) rotate(360deg);
+  -ms-transform: scale(0) rotate(360deg);
+  -o-transform: scale(0) rotate(360deg);
+}
+
+.widgets-control .checkbox input[type="checkbox"]:checked + label::after {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+
+/*
+Setting => Backup Manager:
+===========================
+*/
+.backup-manager .select-box {
+  margin-top: var(--20px);
+}
+
+.backup-manager input[type="radio"] {
+  appearance: none;
+  display: none;
+}
+
+.backup-manager .select-box label {
+  position: relative;
+  cursor: pointer;
+  padding-left: var(--30px);
+}
+
+.backup-manager .select-box label::before,
+.backup-manager .select-box label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: var(--transition);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.backup-manager .select-box label::before {
+  width: 18px;
+  height: 18px;
+  left: 0;
+  border: 2px solid var(--gray);
+}
+
+.backup-manager .select-box label::after {
+  width: 12px;
+  height: 12px;
+  background-color: var(--blue);
+  left: 5px;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+}
+
+.backup-manager .select-box input[type="radio"]:checked + label::before {
+  border-color: var(--blue);
+}
+.backup-manager .select-box input[type="radio"]:checked + label::after {
+  transform: scale(1) translateY(-50%);
+  -webkit-transform: scale(1) translateY(-50%);
+  -moz-transform: scale(1) translateY(-50%);
+  -ms-transform: scale(1) translateY(-50%);
+  -o-transform: scale(1) translateY(-50%);
+}
+
+.backup-manager .servers {
+  margin-top: var(--20px);
+  padding-top: var(--20px);
+  border-top: 1px solid var(--off-white);
+  display: flex;
+  gap: var(--10px);
+  text-align: center;
+}
+
+.backup-manager .servers .server-box {
+  flex: 1;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.backup-manager .servers .server-box label {
+  cursor: pointer;
+  display: block;
+  border: 2px solid var(--off-white);
+  padding: var(--15px);
+  border-radius: var(--br-10);
+  transition: var(--transition);
+  -webkit-border-radius: var(--br-10);
+  -moz-border-radius: var(--br-10);
+  -ms-border-radius: var(--br-10);
+  -o-border-radius: var(--br-10);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.backup-manager .servers .server-box i {
+  display: block;
+  margin-bottom: var(--10px);
+}
+
+.backup-manager .servers .server-box label:hover,
+.backup-manager .servers .server-box input[type="radio"]:checked + label {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+@media (max-width: 47.9375rem) {
+  .backup-manager .servers {
+    flex-direction: column;
+  }
+}
+
+/*
+Profile => Profile-section:
+===========================
+*/
+.profile-section {
+  background-color: #fff;
+  margin: var(--20px);
+  display: flex;
+  align-items: center;
+  border-radius: var(--br-10);
+  -webkit-border-radius: var(--br-10);
+  -moz-border-radius: var(--br-10);
+  -ms-border-radius: var(--br-10);
+  -o-border-radius: var(--br-10);
+}
+
+.profile-section .profile-box {
+  flex-basis: 30%;
+  text-align: center;
+  padding: 0 var(--20px);
+}
+
+.profile-section .profile-box img {
+  width: 120px;
+  height: 120px;
+  max-width: 100%;
+  margin-bottom: var(--10px);
+}
+
+.profile-section .profile-box span.level {
+  display: block;
+  color: var(--gray);
+  margin: var(--15px) 0;
+}
+
+.profile-section .profile-box .level-prog,
+.profile-section .profile-box .level-prog span {
+  height: 6px;
+  border-radius: var(--br-6);
+  -webkit-border-radius: var(--br-6);
+  -moz-border-radius: var(--br-6);
+  -ms-border-radius: var(--br-6);
+  -o-border-radius: var(--br-6);
+}
+
+.profile-section .profile-box .level-prog {
+  width: 65%;
+  margin: 0 auto;
+  background-color: var(--light-gray);
+  position: relative;
+}
+
+.profile-section .profile-box .level-prog span {
+  width: 70%;
+  background-color: var(--blue);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.profile-section .profile-box .stars {
+  margin: var(--15px) auto var(--5px);
+  color: var(--orange);
+  font-size: var(--fs-13);
+}
+
+.profile-section .boxs-wrapper {
+  flex: 1;
+  border-left: 1px solid var(--off-white);
+}
+
+.profile-section .boxs-wrapper .info-box {
+  padding: var(--20px);
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.profile-section .boxs-wrapper .info-box:hover {
+  background-color: #F9F9F9;
+}
+
+.profile-section .boxs-wrapper .info-box:not(:last-child) {
+  border-bottom: 1px solid var(--off-white);
+}
+
+.profile-section .boxs-wrapper .info-box .info-header {
+  color: var(--gray);
+  margin-bottom: var(--10px);
+  flex-basis: 100%;
+}
+
+.profile-section .boxs-wrapper .info-box .info {
+  flex-basis: 45%;
+  font-size: var(--fs-14);
+}
+
+.profile-section .boxs-wrapper .info-box .info .title {
+  color: var(--gray);
+  margin-right: var(--5px);
+}
+
+.profile-section .boxs-wrapper .info-box .toggle-shape {
+  height: 20px;
+}
+
+.profile-section .boxs-wrapper .info-box .toggle-shape::before {
+  width: 12px;
+  height: 12px;
+  font-size: 8px;
+}
+
+.profile-section .boxs-wrapper .info-box input[type="checkbox"]:checked + .toggle-shape::before {
+  left: 62px;
 }
 
 /*

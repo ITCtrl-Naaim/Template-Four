@@ -134,7 +134,7 @@
               <p class="section-p">General Information About Your Account</p>
               <form action="">
                 <div>
-                  <label for="first-name">First Name</label>
+                  <label for="first-name" class="input-label">First Name</label>
                   <input
                     type="text"
                     name="First Name"
@@ -143,7 +143,7 @@
                   />
                 </div>
                 <div>
-                  <label for="last-name">Last Name</label>
+                  <label for="last-name" class="input-label">Last Name</label>
                   <input
                     type="text"
                     name="Last Name"
@@ -152,7 +152,7 @@
                   />
                 </div>
                 <div>
-                  <label for="email">Email</label>
+                  <label for="email" class="input-label">Email</label>
                   <input
                     type="email"
                     name="Email"
@@ -200,20 +200,97 @@
                 <button class="devices-btn btn-off-white">Devices</button>
               </div>
             </section>
-            <!-- Social Information -->
+            <!-- Social Media Information -->
             <section class="social-info p-20">
-              <h2 class="mb-10">Social Information</h2>
-              <p class="section-p">Social Media Information</p>
+              <h2 class="mb-10">Social Media Information</h2>
+              <p class="section-p">Your Social Media Information</p>
+              <form action="">
+                <div class="site">
+                  <i class="fa-brands fa-twitter"></i>
+                  <input type="text" name="twitter-username" placeholder="Twitter Username">
+                </div>
+                <div class="site">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  <input type="text" name="facebook-username" placeholder="Facebook Username">
+                </div>
+                <div class="site">
+                  <i class="fa-brands fa-linkedin"></i>
+                  <input type="text" name="linkedin-username" placeholder="LinkedIn Username">
+                </div>
+                <div class="site">
+                  <i class="fa-brands fa-youtube"></i>
+                  <input type="text" name="youtube-username" placeholder="YouTube Username">
+                </div>
+              </form>
             </section>
             <!-- Widgets Control -->
             <section class="widgets-control p-20">
               <h2 class="mb-10">Widgets Control</h2>
               <p class="section-p">Show/Hide Widgets</p>
+              <div class="checkbox">
+                <input type="checkbox" name="widget" id="quick-draft" checked>
+                <label for="quick-draft">Quick Draft</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="widget" id="yearly-targets" checked>
+                <label for="yearly-targets">Yearly Targets</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="widget" id="tickets-statistics" checked>
+                <label for="tickets-statistics">Tickets Statistics</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="widget" id="latest-news" checked>
+                <label for="latest-news">Latest News</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="widget" id="latest-tasks">
+                <label for="latest-tasks">Latest Tasks</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="widget" id="top-searched-items" checked>
+                <label for="top-searched-items">Top Searched Items</label>
+              </div>
             </section>
             <!-- Backup Manager -->
             <section class="backup-manager p-20">
               <h2 class="mb-10">Backup Manager</h2>
               <p class="section-p">Control Backup Time And Location</p>
+              <div class="select-box">
+                <input type="radio" name="Frequency" id="daily" checked>
+                <label for="daily">Daily</label>
+              </div>
+              <div class="select-box">
+                <input type="radio" name="Frequency" id="weekly">
+                <label for="weekly">Weekly</label>
+              </div>
+              <div class="select-box">
+                <input type="radio" name="Frequency" id="monthly">
+                <label for="monthly">Monthly</label>
+              </div>
+              <div class="servers">
+                <div class="server-box"> 
+                  <input type="radio" name="server" id="megaman">
+                  <label for="megaman">
+                    <i class="fa-solid fa-server"></i>
+                    Megaman
+                  </label>
+                </div>
+                <div class="server-box">
+                  <input type="radio" name="server" id="zero" checked>
+                  <label for="zero">
+                    <i class="fa-solid fa-server"></i>
+                    Zero
+                  </label>
+                </div>
+                <div class="server-box">
+                  <input type="radio" name="server" id="sigma">
+                  <label for="sigma">
+                    <i class="fa-solid fa-server"></i>
+                    Sigma
+                  </label>
+                </div>
+              </div>
             </section>
           </div>
         </main>
