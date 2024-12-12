@@ -8,13 +8,20 @@ deleteBtn.forEach((btn) => {
   });
 });
 
-// Add Active Class To The NavLink That Is Clicked
+// Add Active Class To The NavLink That Matches the Current Path
 const navLinks = document.querySelectorAll("aside nav a");
-const currentPath = window.location.pathname;
+const currentPath = window.location.pathname; // Current path of the page
 
 navLinks.forEach((link) => {
-  // Compare the href attribute with the current path
-  if (link.getAttribute("href") === currentPath) {
+  // Extract the path from the href attribute
+  const linkPath = new URL(link.href, window.location.origin).pathname;
+
+  // Normalize paths by ignoring leading/trailing slashes
+  const normalizedLinkPath = linkPath.replace(/^\/|\/$/g, "");
+  const normalizedCurrentPath = currentPath.replace(/^\/|\/$/g, "");
+
+  // Check if the current path ends with the link path
+  if (normalizedCurrentPath.endsWith(normalizedLinkPath)) {
     link.classList.add("active");
   } else {
     link.classList.remove("active");
