@@ -82,10 +82,24 @@ p {
 
 /* -------------------- Components ----------------------- */
 /*
+Section's Style:
+===========================
+*/
+.section-style {
+  background-color: #fff;
+  padding: var(--20px);
+  border-radius: var(--br-10);
+  -webkit-border-radius: var(--br-10);
+  -moz-border-radius: var(--br-10);
+  -ms-border-radius: var(--br-10);
+  -o-border-radius: var(--br-10);
+}
+
+/*
 Section's Paragraph:
 ===========================
 */
-.sections-wrapper .section-p {
+.section-p {
   color: var(--gray);
   margin-bottom: var(--20px);
   font-size: var(--15px);
@@ -96,7 +110,7 @@ Section's Paragraph:
 Toggle Checkbox:
 ===========================
 */
-.toggle-checkbox {
+.toggle-input {
   appearance: none;
 }
 
@@ -149,11 +163,11 @@ Toggle Checkbox:
   -o-transition: var(--transition);
 }
 
-.toggle-checkbox:checked + .toggle-shape {
+.toggle-input:checked + .toggle-shape {
   background-color: var(--blue);
 }
 
-.toggle-checkbox:checked + .toggle-shape::before {
+.toggle-input:checked + .toggle-shape::before {
   content: "\f00c";
   left: 50px;
   color: var(--blue);
@@ -1058,14 +1072,7 @@ Dashboard => Projects:
 */
 .projects-widget {
   overflow-x: auto;
-  padding: var(--20px);
   margin: var(--20px);
-  background-color: #fff;
-  border-radius: var(--br-10);
-  -webkit-border-radius: var(--br-10);
-  -moz-border-radius: var(--br-10);
-  -ms-border-radius: var(--br-10);
-  -o-border-radius: var(--br-10);
 }
 
 @media (max-width: 47.9375rem) {
@@ -1449,24 +1456,19 @@ Profile => Profile-section:
 ===========================
 */
 .profile-section {
-  background-color: #fff;
-  margin: var(--20px);
   display: flex;
   align-items: center;
-  border-radius: var(--br-10);
-  -webkit-border-radius: var(--br-10);
-  -moz-border-radius: var(--br-10);
-  -ms-border-radius: var(--br-10);
-  -o-border-radius: var(--br-10);
+  overflow: hidden;
+  margin-bottom: var(--20px);
 }
 
 .profile-section .profile-box {
-  flex-basis: 30%;
+  width: 300px;
   text-align: center;
   padding: 0 var(--20px);
 }
 
-.profile-section .profile-box img {
+.profile-section .profile-box > img {
   width: 120px;
   height: 120px;
   max-width: 100%;
@@ -1497,7 +1499,6 @@ Profile => Profile-section:
 }
 
 .profile-section .profile-box .level-prog span {
-  width: 70%;
   background-color: var(--blue);
   position: absolute;
   top: 0;
@@ -1510,16 +1511,12 @@ Profile => Profile-section:
   font-size: var(--fs-13);
 }
 
-.profile-section .boxs-wrapper {
-  flex: 1;
-  border-left: 1px solid var(--off-white);
+.profile-section .box-wrapper {
+  width: 100%;
 }
 
-.profile-section .boxs-wrapper .info-box {
+.profile-section .box-wrapper .info-card {
   padding: var(--20px);
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 10px;
   transition: var(--transition);
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);
@@ -1527,42 +1524,116 @@ Profile => Profile-section:
   -o-transition: var(--transition);
 }
 
-.profile-section .boxs-wrapper .info-box:hover {
-  background-color: #F9F9F9;
+.profile-section .box-wrapper .info-card:hover {
+  background-color: #f9f9f9;
 }
 
-.profile-section .boxs-wrapper .info-box:not(:last-child) {
+.profile-section .box-wrapper .info-card:not(:last-child) {
   border-bottom: 1px solid var(--off-white);
 }
 
-.profile-section .boxs-wrapper .info-box .info-header {
+.profile-section .box-wrapper .info-card .card-header {
   color: var(--gray);
-  margin-bottom: var(--10px);
-  flex-basis: 100%;
+  margin-bottom: var(--15px);
 }
 
-.profile-section .boxs-wrapper .info-box .info {
-  flex-basis: 45%;
+.profile-section .box-wrapper .info-card .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.profile-section .box-wrapper .info-card .grid > * {
+  justify-self: start;
+}
+
+.profile-section .box-wrapper .info-card .info-item {
   font-size: var(--fs-14);
 }
 
-.profile-section .boxs-wrapper .info-box .info .title {
+.profile-section .box-wrapper .info-card .info-item .title {
   color: var(--gray);
   margin-right: var(--5px);
 }
 
-.profile-section .boxs-wrapper .info-box .toggle-shape {
+.profile-section .box-wrapper .info-card .toggle-shape {
   height: 20px;
 }
 
-.profile-section .boxs-wrapper .info-box .toggle-shape::before {
+.profile-section .box-wrapper .info-card .toggle-shape::before {
   width: 12px;
   height: 12px;
   font-size: 8px;
 }
 
-.profile-section .boxs-wrapper .info-box input[type="checkbox"]:checked + .toggle-shape::before {
+.profile-section
+  .box-wrapper
+  .info-card
+  input[type="checkbox"]:checked
+  + .toggle-shape::before {
   left: 62px;
+}
+
+@media (max-width: 47.9375rem) {
+  .profile-page {
+    margin: var(--10px);
+  }
+  .profile-section {
+    flex-direction: column;
+    padding: var(--20px) 0;
+    margin-bottom: var(--10px);
+  }
+  .profile-section .box-wrapper {
+    border: none;
+  }
+  .profile-section .box-wrapper .info-card .card-header {
+    text-align: center;
+  }
+  .profile-section .box-wrapper .info-card .grid > * {
+    justify-self: center;
+  }
+}
+
+@media (min-width: 48rem) {
+  .profile-section .box-wrapper {
+    border-left: 1px solid var(--off-white);
+  }
+}
+
+/*
+Skills Section:
+===========================
+*/
+.skills-section {
+  flex-grow: 1;
+}
+
+.skills-section ul li {
+  padding: var(--10px) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--5px);
+}
+
+.skills-section ul li:not(:last-child) {
+  border-bottom: 1px solid var(--off-white);
+}
+
+.skills-section ul li span {
+  font-size: var(--fs-14);
+}
+
+/*
+Activity Section:
+===========================
+*/
+.activity-section {
+  flex-grow: 2;
+}
+
+.activity-section article > img {
+  width: 64px;
+  height: 64px;
 }
 
 /*

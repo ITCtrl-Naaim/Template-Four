@@ -98,125 +98,222 @@
         </header>
         <main>
           <h1 class="content-header">Profile</h1>
-          <!-- Profile Section -->
-          <section class="profile-section">
-            <div class="profile-box">
-              <img src="imgs/avatar.png" alt="" />
-              <h3>Naaim Karim</h3>
-              <span class="level">Level 20</span>
-              <div class="level-prog">
-                <span></span>
+          <div class="profile-page m-20">
+            <!-- Profile Section -->
+            <section class="profile-section section-style">
+              <div class="profile-box">
+                <img src="imgs/avatar.png" alt="" />
+                <h3>Naaim Karim</h3>
+                <span class="level">Level 20</span>
+                <div class="level-prog">
+                  <span style="width: 70%" data-progress="70%"></span>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="fs-13 c-gray">550 Rating</span>
               </div>
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+              <div class="box-wrapper">
+                <div class="info-card">
+                  <h4 class="card-header">General Information</h4>
+                  <div class="grid">
+                    <div class="info-item">
+                      <span class="title">Full Name:</span>
+                      <span class="text">Naaim Karim</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="title">Country:</span>
+                      <span class="text">Luxembourg</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="title">Gender:</span>
+                      <span class="text">Male</span>
+                    </div>
+                    <label for="generalInfo" class="d-flex align-c">
+                      <input
+                        type="checkbox"
+                        name="general_info"
+                        id="generalInfo"
+                        class="toggle-input"
+                        checked
+                      />
+                      <div class="toggle-shape"></div>
+                    </label>
+                  </div>
+                </div>
+                <div class="info-card">
+                  <h4 class="card-header">Personal Information</h4>
+                  <div class="grid">
+                    <div class="info-item">
+                      <span class="title">Email:</span>
+                      <span class="text">yourname@example.tld</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="title">Date Of Birth:</span>
+                      <span class="text">April 07 / 1999</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="title">Phone:</span>
+                      <span class="text">0123456789</span>
+                    </div>
+                    <label for="personalInfo" class="d-flex align-c">
+                      <input
+                        type="checkbox"
+                        name="personal_info"
+                        id="personalInfo"
+                        class="toggle-input"
+                      />
+                      <div class="toggle-shape"></div>
+                    </label>
+                  </div>
+                </div>
+                <div class="info-card">
+                  <h4 class="card-header">Job Information</h4>
+                  <div class="grid">
+                    <div class="info-item">
+                      <span class="title">Title:</span>
+                      <span class="text">Full Stack Developer</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="title">Years Of Experience:</span>
+                      <span class="text">15+</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="title">Programming Languages:</span>
+                      <span class="text"> JS, Python, C++</span>
+                    </div>
+                    <label for="jobInfo" class="d-flex align-c">
+                      <input
+                        type="checkbox"
+                        name="job_info"
+                        id="jobInfo"
+                        class="toggle-input"
+                        checked
+                      />
+                      <div class="toggle-shape"></div>
+                    </label>
+                  </div>
+                </div>
+                <div class="info-card">
+                  <h4 class="card-header">Billing Information</h4>
+                  <div class="grid">
+                    <div class="info-item">
+                      <span class="title">Payment Method:</span>
+                      <span class="text">Paypal</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="title">Subscription:</span>
+                      <span class="text">Monthly</span>
+                    </div>
+                    <div class="info-item">
+                      <span class="title">Email:</span>
+                      <span class="text">website@example.tld</span>
+                    </div>
+                    <label for="billingInfo" class="d-flex align-c">
+                      <input
+                        type="checkbox"
+                        name="billing_info"
+                        id="billingInfo"
+                        class="toggle-input"
+                      />
+                      <div class="toggle-shape"></div>
+                    </label>
+                  </div>
+                </div>
               </div>
-              <span class="fs-13 c-gray">550 Rating</span>
+            </section>
+            <!-- Skills & Lastest Activities Section -->
+            <div class="d-flex gap-20">
+              <section class="skills-section section-style">
+                <h2 class="mb-10">My Skills</h2>
+                <p class="section-p">Completed Skills List</p>
+                <ul>
+                  <li>
+                    <span class="btn-off-white">HTML</span>
+                    <span class="btn-off-white">Pugjs</span>
+                    <span class="btn-off-white">HAML</span>
+                  </li>
+                  <li>
+                    <span class="btn-off-white">CSS</span>
+                    <span class="btn-off-white">SASS</span>
+                    <span class="btn-off-white">Stylus</span>
+                  </li>
+                  <li>
+                    <span class="btn-off-white">JavaScript</span>
+                    <span class="btn-off-white">TypeScript</span>
+                  </li>
+                  <li>
+                    <span class="btn-off-white">Vuejs</span>
+                    <span class="btn-off-white">Reactjs</span>
+                  </li>
+                  <li>
+                    <span class="btn-off-white">Jest</span>
+                    <span class="btn-off-white">Jasmine</span>
+                  </li>
+                  <li>
+                    <span class="btn-off-white">PHP</span>
+                    <span class="btn-off-white">Laravel</span>
+                  </li>
+                  <li>
+                    <span class="btn-off-white">Python</span>
+                    <span class="btn-off-white">Django</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="activity-section section-style">
+                <h2 class="mb-10">Latest Activities</h2>
+                <p class="section-p">Latest Activities Done By The User</p>
+                <article>
+                  <img src="imgs/activity-01.png" alt="">
+                  <div class="details">
+                    <span>Store</span>
+                    <p>Buy The "Mastering Python" Course</p>
+                  </div>
+                  <div class="time">
+                    <span>18:10</span>
+                    <span>Yesterday</span>
+                  </div>
+                </article>
+                <article>
+                  <img src="imgs/activity-02.png" alt="">
+                  <div class="details">
+                    <span>Store</span>
+                    <p>Buy The "Mastering Python" Course</p>
+                  </div>
+                  <div class="time">
+                    <span>18:10</span>
+                    <span>Yesterday</span>
+                  </div>
+                </article>
+                <article>
+                  <img src="imgs/activity-03.png" alt="">
+                  <div class="details">
+                    <span>Store</span>
+                    <p>Buy The "Mastering Python" Course</p>
+                  </div>
+                  <div class="time">
+                    <span>18:10</span>
+                    <span>Yesterday</span>
+                  </div>
+                </article>
+                <article>
+                  <img src="imgs/activity-01.png" alt="">
+                  <div class="details">
+                    <span>Store</span>
+                    <p>Buy The "Mastering Python" Course</p>
+                  </div>
+                  <div class="time">
+                    <span>18:10</span>
+                    <span>Yesterday</span>
+                  </div>
+                </article>
+              </section>
             </div>
-            <div class="boxs-wrapper">
-              <div class="info-box">
-                <h4 class="info-header">General Information</h4>
-                <div class="info">
-                  <span class="title">Full Name:</span>
-                  <span class="text">Naaim Karim</span>
-                </div>
-                <div class="info">
-                  <span class="title">Country:</span>
-                  <span class="text">Luxembourg</span>
-                </div>
-                <div class="info">
-                  <span class="title">Gender:</span>
-                  <span class="text">Male</span>
-                </div>
-                <label for="generalInfo" class="d-flex align-c">
-                  <input
-                    type="checkbox"
-                    name="general_info"
-                    id="generalInfo"
-                    class="toggle-checkbox"
-                    checked
-                  />
-                  <div class="toggle-shape"></div>
-                </label>
-              </div>
-              <div class="info-box">
-                <h4 class="info-header">Personal Information</h4>
-                <div class="info">
-                  <span class="title">Email:</span>
-                  <span class="text">yourname@example.tld</span>
-                </div>
-                <div class="info">
-                  <span class="title">Date Of Birth:</span>
-                  <span class="text">April 07 / 1999</span>
-                </div>
-                <div class="info">
-                  <span class="title">Phone:</span>
-                  <span class="text">0123456789</span>
-                </div>  
-                <label for="personalInfo" class="d-flex align-c">
-                  <input
-                    type="checkbox"
-                    name="personal_info"
-                    id="personalInfo"
-                    class="toggle-checkbox"
-                  />
-                  <div class="toggle-shape"></div>
-                </label>
-              </div>
-              <div class="info-box">
-                <h4 class="info-header">Job Information</h4>
-                <div class="info">
-                  <span class="title">Title:</span>
-                  <span class="text">Full Stack Developer</span>
-                </div>
-                <div class="info">
-                  <span class="title">Years Of Experience:</span>
-                  <span class="text">15+</span>
-                </div>
-                <div class="info">
-                  <span class="title">Programming Languages:</span>
-                  <span class="text"> JS, Python, C++</span>
-                </div>
-                <label for="jobInfo" class="d-flex align-c">
-                  <input
-                    type="checkbox"
-                    name="job_info"
-                    id="jobInfo"
-                    class="toggle-checkbox"
-                    checked
-                  />
-                  <div class="toggle-shape"></div>
-                </label>
-              </div>
-              <div class="info-box">
-                <h4 class="info-header">Billing Information</h4>
-                <div class="info">
-                  <span class="title">Payment Method:</span>
-                  <span class="text">Paypal</span>
-                </div>
-                <div class="info">
-                  <span class="title">Subscription:</span>
-                  <span class="text">Monthly</span>
-                </div>
-                <div class="info">
-                  <span class="title">Email:</span>
-                  <span class="text">website@example.tld</span>
-                </div>
-                <label for="billingInfo" class="d-flex align-c">
-                  <input
-                    type="checkbox"
-                    name="billing_info"
-                    id="billingInfo"
-                    class="toggle-checkbox"
-                  />
-                  <div class="toggle-shape"></div>
-                </label>
-              </div>
-            </div>
-          </section>
+          </div>
         </main>
       </div>
     </div>
