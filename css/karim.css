@@ -228,7 +228,7 @@ Sidebar:
 @media (min-width: 48rem) {
   /* 768px */
   .page > aside {
-    width: 15.625rem; /* 250px */
+    width: 13.75rem; /* 220px */
   }
   .page > aside .logo::before,
   .page > aside .logo::after {
@@ -1112,7 +1112,8 @@ Dashboard => Projects:
 }
 
 .projects-widget table img {
-  width: 30px;
+  width: 32px;
+  height: 32px;
   max-width: 100%;
   border: 2px solid #fff;
   border-radius: 50%;
@@ -1460,6 +1461,7 @@ Profile => Profile-section:
   align-items: center;
   overflow: hidden;
   margin-bottom: var(--20px);
+  padding: 0;
 }
 
 .profile-section .profile-box {
@@ -1631,9 +1633,173 @@ Activity Section:
   flex-grow: 2;
 }
 
+.activity-section article {
+  display: flex;
+  align-items: center;
+  gap: var(--10px);
+}
+
+.activity-section article:not(:last-child) {
+  border-bottom: 1px solid var(--off-white);
+  margin-bottom: var(--20px);
+  padding-bottom: var(--20px);
+}
+
 .activity-section article > img {
   width: 64px;
   height: 64px;
+}
+
+.activity-section article .details {
+  flex: 1;
+}
+
+.activity-section article .details p {
+  color: var(--gray);
+  margin-top: var(--10px);
+}
+
+.activity-section article .date-holder .time {
+  display: block;
+}
+
+.activity-section article .date-holder .date {
+  font-size: var(--fs-14);
+  color: var(--gray);
+}
+
+@media (min-width: 48rem) {
+  .activity-section article .date-holder {
+    text-align: right;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .skills-and-activities {
+    flex-direction: column;
+  }
+  .skills-section ul li {
+    justify-content: center;
+  }
+  .activity-section article {
+    flex-direction: column;
+    text-align: center;
+  }
+  .activity-section article .details p {
+    margin-top: var(--5px);
+    font-size: var(--15px);
+  }
+}
+
+/*
+Projects:
+===========================
+*/
+.projects-page section {
+  padding: var(--20px);
+  position: relative;
+}
+
+.projects-page section > h4 {
+  margin-bottom: var(--10px);
+}
+
+.projects-page section .date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--gray);
+  font-size: var(--fs-13);
+}
+
+.projects-page section ul {
+  border-bottom: 1px solid var(--off-white);
+}
+
+.projects-page section .team {
+  display: flex;
+  padding-bottom: var(--20px);
+  margin-bottom: var(--15px);
+}
+
+.projects-page section .team li:not(:first-child) {
+  margin-left: -10px;
+}
+
+.projects-page section .team img {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.projects-page section .team li:hover {
+  z-index: 100;
+}
+
+.projects-page section .tags {
+  display: flex;
+  gap: var(--10px);
+  padding-bottom: var(--15px);
+  margin-bottom: var(--20px);
+}
+
+.projects-page section .tags li {
+  font-size: var(--fs-13);
+}
+.projects-page section .prog,
+.projects-page section .prog span {
+  border-radius: var(--br-6);
+  -webkit-border-radius: var(--br-6);
+  -moz-border-radius: var(--br-6);
+  -ms-border-radius: var(--br-6);
+  -o-border-radius: var(--br-6);
+}
+
+.projects-page section .prog {
+  width: 15rem;
+  height: 6px;
+  background-color: var(--off-white);
+  position: relative;
+}
+
+.projects-page section .prog span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.projects-page section .prog span.completed {
+  background-color: var(--blue);
+}
+
+.projects-page section .prog span.inprogress {
+  background-color: var(--green);
+}
+
+.projects-page section .prog span.delayed {
+  background-color: var(--red);
+}
+
+.projects-page section .money {
+  font-size: var(--fs-14);
+  color: var(--gray);
+}
+
+.projects-page section .money i {
+  margin-right: var(--5px);
+}
+
+@media (max-width: 31.25rem) {
+  .projects-page section .tags {
+    flex-direction: column;
+  }
+  
 }
 
 /*
