@@ -391,7 +391,7 @@ Sections Wrapper & section
 
 @media (max-width: 47.9375rem) {
   .content-side .sections-wrapper {
-    margin: 20px 10px 10px;
+    margin: var(--10px);
   }
 }
 
@@ -1603,7 +1603,7 @@ Profile => Profile-section:
 }
 
 /*
-Skills Section:
+Profile => Skills Section:
 ===========================
 */
 .skills-section {
@@ -1626,7 +1626,7 @@ Skills Section:
 }
 
 /*
-Activity Section:
+Profile => Activity Section:
 ===========================
 */
 .activity-section {
@@ -1648,6 +1648,11 @@ Activity Section:
 .activity-section article > img {
   width: 64px;
   height: 64px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .activity-section article .details {
@@ -1702,6 +1707,7 @@ Projects:
 
 .projects-page section > h4 {
   margin-bottom: var(--10px);
+  font-weight: normal;
 }
 
 .projects-page section .date {
@@ -1723,13 +1729,21 @@ Projects:
 }
 
 .projects-page section .team li:not(:first-child) {
-  margin-left: -10px;
+  margin-left: -0.8rem;
 }
 
-.projects-page section .team img {
+.projects-page section .team li:hover {
+  z-index: 100;
+}
+
+.projects-page section .team li a {
+  display: block;
+}
+
+.projects-page section .team li a img {
   width: 32px;
   height: 32px;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1737,12 +1751,9 @@ Projects:
   -o-border-radius: 50%;
 }
 
-.projects-page section .team li:hover {
-  z-index: 100;
-}
-
 .projects-page section .tags {
   display: flex;
+  justify-content: flex-end;
   gap: var(--10px);
   padding-bottom: var(--15px);
   margin-bottom: var(--20px);
@@ -1762,6 +1773,7 @@ Projects:
 
 .projects-page section .prog {
   width: 15rem;
+  max-width: 100%;
   height: 6px;
   background-color: var(--off-white);
   position: relative;
@@ -1799,7 +1811,193 @@ Projects:
   .projects-page section .tags {
     flex-direction: column;
   }
-  
+  .projects-page section .project-details {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .projects-page section .prog {
+    margin-bottom: var(--10px);
+  }
+}
+
+/*
+Courses:
+===========================
+*/
+.courses-page section .cover {
+  width: 100%;
+}
+
+.courses-page section .definition {
+  padding: var(--20px) ;
+}
+
+.courses-page section .definition h4 {
+  margin-bottom: var(--15px);
+}
+
+.courses-page section .definition p {
+  color: var(--gray);
+  font-size: var(--fs-14);
+  line-height: 1.6;
+}
+
+.courses-page section .details-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--15px);
+  margin-top: var(--15px);
+  border-top: 1px solid var(--off-white);
+  font-size: var(--fs-14);
+  position: relative;
+}
+
+.courses-page section .details-holder span {
+  color: var(--gray);
+}
+
+.courses-page section .details-holder a {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+/*
+Files:
+===========================
+*/
+.files-page .sections-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  gap: var(--20px);
+  flex: 1;
+}
+
+.files-page .files-stats {
+  min-width: 16.25rem;
+  order: 1;
+}
+
+.files-page .files-stats li {
+  display: flex;
+  align-items: center;
+  gap: var(--10px);
+  font-size: var(--fs-13);
+  margin-top: var(--10px);
+  border: 1px solid var(--off-white);
+  padding: var(--10px);
+  border-radius: var(--br-6);
+  -webkit-border-radius: var(--br-6);
+  -moz-border-radius: var(--br-6);
+  -ms-border-radius: var(--br-6);
+  -o-border-radius: var(--br-6);
+}
+
+.files-page .files-stats li i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.files-page .files-stats li i.blue {
+  background-color: rgba(0, 117, 255, 0.2);
+}
+
+.files-page .files-stats li i.green {
+  background-color: rgba(34, 197, 94, 0.2);
+}
+
+.files-page .files-stats li i.red {
+  background-color: rgba(244, 67, 54, 0.2);
+}
+
+.files-page .files-stats li i.orange {
+  background-color: rgba(245, 158, 11, 0.2);
+}
+
+.files-page .files-stats li .title {
+  display: block;
+  margin-bottom: var(--5px);
+}
+
+.files-page .files-stats .amount {
+  color: var(--gray);
+}
+
+.files-page .files-stats .size {
+  color: var(--gray);
+  margin-left: auto;
+}
+
+.files-page .files-stats .upload {
+  font-size: var(--fs-13);
+  margin: auto;
+  display: block;
+}
+
+.files-page .sections-wrapper section {
+  padding: var(--10px);
+}
+
+.files-page .sections-wrapper section .content {
+  position: relative;
+  text-align: center;
+}
+
+.files-page .sections-wrapper section .content i {
+  color: var(--gray);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.files-page .sections-wrapper section .content img {
+  width: 64px;
+  max-width: 100%;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.files-page .sections-wrapper section:hover img {
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+}
+
+.files-page .sections-wrapper section .content h4 {
+  font-weight: normal;
+  margin: var(--10px) 0;
+}
+
+.files-page .sections-wrapper section .content span {
+  display: block;
+  color: var(--gray);
+  font-size: var(--fs-13);
+  text-align: left;
+}
+
+.files-page .sections-wrapper section .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--gray);
+  font-size: var(--fs-13);
+  border-top: 1px solid var(--off-white);
+  padding-top: var(--10px);
+  margin-top: var(--10px);
 }
 
 /*
