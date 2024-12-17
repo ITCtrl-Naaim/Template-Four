@@ -1829,7 +1829,7 @@ Courses:
 }
 
 .courses-page section .definition {
-  padding: var(--20px) ;
+  padding: var(--20px);
 }
 
 .courses-page section .definition h4 {
@@ -1877,11 +1877,11 @@ Files:
   grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
   gap: var(--20px);
   flex: 1;
+  margin: 0;
 }
 
 .files-page .files-stats {
   min-width: 16.25rem;
-  order: 1;
 }
 
 .files-page .files-stats li {
@@ -1939,8 +1939,19 @@ Files:
 
 .files-page .files-stats .upload {
   font-size: var(--fs-13);
-  margin: auto;
+  margin: var(--20px) auto 0;
   display: block;
+  width: fit-content;
+  padding: var(--10px) var(--15px);
+}
+
+.files-page .files-stats .upload i {
+  margin-right: var(--10px);
+}
+
+.files-page .files-stats .upload:hover i {
+  animation: bouncing 0.4s alternate infinite;
+  -webkit-animation: bouncing 0.4s alternate infinite;
 }
 
 .files-page .sections-wrapper section {
@@ -1962,6 +1973,7 @@ Files:
 .files-page .sections-wrapper section .content img {
   width: 64px;
   max-width: 100%;
+  margin: var(--15px) 0;
   transition: var(--transition);
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);
@@ -1979,7 +1991,8 @@ Files:
 
 .files-page .sections-wrapper section .content h4 {
   font-weight: normal;
-  margin: var(--10px) 0;
+  margin-bottom: var(--15px);
+  font-size: var(--15px);
 }
 
 .files-page .sections-wrapper section .content span {
@@ -2000,6 +2013,125 @@ Files:
   margin-top: var(--10px);
 }
 
+@media (max-width: 47.9375rem) {
+  .files-page {
+    flex-direction: column;
+    margin: var(--10px);
+    gap: var(--10px);
+  }
+  .files-page .sections-wrapper {
+    gap: var(--10px);
+  }
+}
+
+@media (min-width: 48rem) {
+  .files-page .files-stats {
+    order: 1;
+  }
+}
+
+/*
+Plans:
+===========================
+*/
+.plans-page.sections-wrapper > section {
+  padding: var(--20px);
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.plans-page > section .price {
+  text-align: center;
+  color: #fff;
+  border: 3px solid #fff;
+  padding: var(--20px);
+}
+
+.plans-page > section .price h2 {
+  margin-bottom: var(--10px);
+}
+
+.plans-page > section .price span {
+  font-size: var(--40px);
+  position: relative;
+}
+
+.plans-page > section .price span::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\24";
+  font-weight: normal;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 5px;
+  left: -20px;
+}
+
+.plans-page > section.free .price {
+  background-color: var(--green);
+  outline: 3px solid var(--green);
+}
+
+.plans-page > section.basic .price {
+  background-color: var(--blue);
+  outline: 3px solid var(--blue);
+}
+
+.plans-page > section.premium .price {
+  background-color: var(--orange);
+  outline: 3px solid var(--orange);
+}
+
+.plans-page > section ul {
+  margin: var(--20px) 0;
+}
+
+.plans-page > section ul li {
+  padding: var(--15px) 0;
+  border-bottom: 1px solid var(--off-white);
+  font-size: var(--15px);
+  display: flex;
+  align-items: center;
+  gap: var(--5px);
+}
+
+.plans-page > section ul li i.yes {
+  color: var(--green);
+}
+
+.plans-page > section ul li i.help {
+  color: var(--gray);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.plans-page > section ul li i.no {
+  color: var(--red);
+}
+
+.plans-page > section .join {
+  color: #fff;
+}
+
+.plans-page > section.free .join {
+  background-color: var(--green);
+}
+
+.plans-page > section.basic .join {
+  background-color: var(--blue);
+}
+
+.plans-page > section.premium .join {
+  background-color: var(--orange);
+}
+
+.plans-page > section .current-plan {
+  color: var(--gray);
+  text-align: center;
+}
+
 /*
 Keyframes:
 ===========================
@@ -2011,4 +2143,14 @@ Keyframes:
   to {
     background-color: #fff;
   }
+}
+
+@keyframes bouncing {
+  100% {
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+}
 }
