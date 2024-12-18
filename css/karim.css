@@ -289,7 +289,7 @@ body > .page .content-side {
 Main Head:
 ===========================
 */
-body > .page .content-side header form::before {
+body > .page .content-side > header form::before {
   font-family: var(--fa-style-family-classic);
   content: "\f002";
   font-weight: 900;
@@ -305,7 +305,7 @@ body > .page .content-side header form::before {
   -o-transform: translate(-50%, -50%);
 }
 
-body > .page .content-side header input[type="search"] {
+body > .page .content-side > header input[type="search"] {
   padding: var(--10px) var(--10px) var(--10px) var(--30px);
   border-radius: var(--br-10);
   border: 1px solid var(--light-gray);
@@ -322,26 +322,26 @@ body > .page .content-side header input[type="search"] {
   -o-transition: var(--transition);
 }
 
-body > .page .content-side header input[type="search"]:focus {
+body > .page .content-side > header input[type="search"]:focus {
   width: 100%;
   border-color: var(--gray);
 }
 
-body > .page .content-side header input[type="search"]:focus::placeholder {
+body > .page .content-side > header input[type="search"]:focus::placeholder {
   opacity: 0;
 }
 
-body > .page .content-side header .icons img {
+body > .page .content-side > header .icons img {
   max-width: 100%;
   width: 2rem;
 }
 
-body > .page .content-side header .icons .notification {
+body > .page .content-side > header .icons .notification {
   margin-right: var(--10px);
   position: relative;
 }
 
-body > .page .content-side header .icons .notification::before {
+body > .page .content-side > header .icons .notification::before {
   content: "";
   position: absolute;
   top: -7px;
@@ -1869,19 +1869,124 @@ Courses:
 }
 
 /*
+Friends:
+===========================
+*/
+.friends-page section {
+  padding: var(--20px);
+}
+
+.friends-page section .profile-header {
+  border-bottom: 1px solid var(--off-white);
+  padding-bottom: var(--15px);
+  margin-bottom: var(--15px);
+  text-align: center;
+  position: relative;
+}
+
+.friends-page section .profile-header .contact-icons {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.friends-page section .profile-header .contact-icons i {
+  cursor: pointer;
+  font-size: var(--fs-13);
+  color: #555;
+  background-color: var(--off-white);
+  padding: var(--10px);
+  border-radius: 50%;
+  transition: var(--transition);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.friends-page section .profile-header .contact-icons i:hover {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+.friends-page section .profile-header img {
+  width: 100px;
+  height: 100px;
+  margin: var(--10px) 0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.friends-page section .profile-header h4 {
+  margin-bottom: var(--5px);
+}
+
+.friends-page section .profile-header h4 .vip {
+  margin-right: var(--5px);
+  color: var(--orange);
+}
+
+.friends-page section .profile-header .role {
+  color: var(--gray);
+  font-size: var(--fs-13);
+}
+
+.friends-page section .profile-stats {
+  border-bottom: 1px solid var(--off-white);
+  padding-bottom: var(--15px);
+  margin-bottom: var(--15px);
+}
+
+.friends-page section .profile-stats li {
+  font-size: var(--fs-14);
+}
+
+.friends-page section .profile-stats li:not(:last-child) {
+  margin-bottom: var(--10px);
+}
+
+.friends-page section .profile-stats li i {
+  margin-right: var(--5px);
+}
+
+.friends-page section .profile-actions {
+  font-size: var(--fs-13);
+  display: flex;
+  align-items: center;
+  gap: var(--5px);
+}
+
+.friends-page section .profile-actions .join-date {
+  margin-right: auto;
+  color: var(--gray);
+}
+
+.friends-page section .profile-actions button {
+  color: #fff;
+  background-color: var(--red);
+  cursor: pointer;
+}
+
+.friends-page section .profile-actions button:hover {
+  background-color: #e4392d;
+}
+
+/*
 Files:
 ===========================
 */
-.files-page .sections-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+.files-page {
+  display: flex;
+  align-items: flex-start;
   gap: var(--20px);
-  flex: 1;
-  margin: 0;
-}
-
-.files-page .files-stats {
-  min-width: 16.25rem;
+  margin: var(--20px);
 }
 
 .files-page .files-stats li {
@@ -1954,6 +2059,14 @@ Files:
   -webkit-animation: bouncing 0.4s alternate infinite;
 }
 
+.files-page .sections-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  gap: var(--20px);
+  flex: 1;
+  margin: 0;
+}
+
 .files-page .sections-wrapper section {
   padding: var(--10px);
 }
@@ -2016,6 +2129,7 @@ Files:
 @media (max-width: 47.9375rem) {
   .files-page {
     flex-direction: column;
+    align-items: normal;
     margin: var(--10px);
     gap: var(--10px);
   }
@@ -2027,6 +2141,7 @@ Files:
 @media (min-width: 48rem) {
   .files-page .files-stats {
     order: 1;
+    min-width: 18rem;
   }
 }
 
@@ -2047,7 +2162,23 @@ Plans:
   text-align: center;
   color: #fff;
   border: 3px solid #fff;
+  outline: 3px solid;
   padding: var(--20px);
+}
+
+.plans-page > section.free .price {
+  background-color: var(--green);
+  outline-color: var(--green);
+}
+
+.plans-page > section.basic .price {
+  background-color: var(--blue);
+  outline-color: var(--blue);
+}
+
+.plans-page > section.premium .price {
+  background-color: var(--orange);
+  outline-color: var(--orange);
 }
 
 .plans-page > section .price h2 {
@@ -2067,21 +2198,6 @@ Plans:
   position: absolute;
   top: 5px;
   left: -20px;
-}
-
-.plans-page > section.free .price {
-  background-color: var(--green);
-  outline: 3px solid var(--green);
-}
-
-.plans-page > section.basic .price {
-  background-color: var(--blue);
-  outline: 3px solid var(--blue);
-}
-
-.plans-page > section.premium .price {
-  background-color: var(--orange);
-  outline: 3px solid var(--orange);
 }
 
 .plans-page > section ul {
@@ -2117,14 +2233,32 @@ Plans:
 
 .plans-page > section.free .join {
   background-color: var(--green);
+  border: 2px solid var(--green);
+}
+
+.plans-page > section.free .join:hover {
+  color: var(--green);
+  background-color: #fff;
 }
 
 .plans-page > section.basic .join {
   background-color: var(--blue);
+  border: 2px solid var(--blue);
+}
+
+.plans-page > section.basic .join:hover {
+  color: var(--blue);
+  background-color: #fff;
 }
 
 .plans-page > section.premium .join {
   background-color: var(--orange);
+  border: 2px solid var(--orange);
+}
+
+.plans-page > section.premium .join:hover {
+  color: var(--orange);
+  background-color: #fff;
 }
 
 .plans-page > section .current-plan {
@@ -2152,5 +2286,5 @@ Keyframes:
     -moz-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
     -o-transform: translateY(-5px);
-}
+  }
 }

@@ -42,7 +42,7 @@ Box Module + Display:
   gap: var(--20px);
 }
 
-.grid-lg-4 {
+.grid-lg-5 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* 300px */
   gap: var(--20px);
@@ -59,7 +59,7 @@ Box Module + Display:
 @media (max-width: 47.9375rem) {
   /* 767px */
   .grid-lg-3,
-  .grid-lg-4 {
+  .grid-lg-5 {
     grid-template-columns: minmax(12.5rem, 1fr);
     gap: 10px;
   }
